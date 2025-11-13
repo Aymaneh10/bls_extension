@@ -1,0 +1,439 @@
+/* Merged CSS from all files: index.css, styles.css, additional-styles.css */
+:host {
+  all: initial;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  all: unset;
+}
+
+/* تنسيق الحاوية الرئيسية */
+.button-container {
+    display: flex; /* لترتيب الأزرار جنبًا إلى جنب */
+    align-items: center; /* لمحاذاة العناصر عموديًا */
+    background-color: #1a1a1a; /* لون الخلفية الداكن المشابه للصورة */
+    padding: 10px 15px; /* مسافة داخلية */
+    border-radius: 30px; /* حواف مستديرة جدًا */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* لإضافة عمق */
+    width: fit-content; /* جعل العرض بحجم المحتوى */
+    margin: 50px auto; /* لتوسيط الحاوية في الصفحة */
+}
+
+/* تنسيق الأزرار المشترك */
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    height: 40px; /* ارتفاع موحد */
+}
+
+/* 1. الزر الرئيسي (SETTINGS) */
+.main-button {
+    background-color: #3b5998; /* اللون الأزرق الغامق */
+    color: white;
+    padding: 0 20px;
+    border-radius: 20px; /* حواف مستديرة قليلاً أقل من الحاوية */
+    margin: 0 10px; /* مسافة من الأزرار الجانبية */
+    text-transform: uppercase;
+    white-space: nowrap; /* منع انقسام كلمة SETTINGS */
+}
+
+.main-button i {
+    margin-right: 8px; /* مسافة بين الأيقونة والنص */
+    font-size: 18px;
+}
+
+.main-button:hover {
+    background-color: #4c69b8; /* لون أفتح عند التحويم */
+}
+
+/* 2. الأزرار الجانبية (الأيقونات فقط) */
+.icon-button {
+    background-color: transparent; /* خلفية شفافة */
+    color: #f1f1f1; /* لون الأيقونة (أبيض فاتح) */
+    width: 40px; /* لجعل الزر مربعًا (40x40) */
+    border-radius: 50%; /* لجعل الزر دائريًا إذا كان مربعًا */
+}
+
+.icon-button i {
+    font-size: 20px;
+}
+
+.icon-button:hover {
+    color: white; /* يمكن تفتيح لون الأيقونة عند التحويم */
+    /* يمكنك إضافة تأثير خلفية خفيفة هنا إذا أردت */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1a1a1a, #333); /* خلفية تدرجية داكنة */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.modal {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة لـ glassmorphism */
+    backdrop-filter: blur(15px); /* تأثير blur للزجاج */
+    border-radius: 20px;
+    padding: 30px;
+    width: 450px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    cursor: grab;
+}
+
+.modal-header:active {
+    cursor: grabbing;
+}
+
+.modal-title {
+    color: #4da6ff;
+    font-size: 1.8em;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    color: #ccc;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 0 0 120px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    padding: 12px;
+    font-size: 1em;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4da6ff;
+    outline: none;
+}
+
+.form-group select {
+    appearance: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBmaWxsPSIjNGRhNmZmIiBkPSJNNiA5LjVsLTQuNSA0LjUtNC41LTQuNSIvPjwvc3ZnPg==') no-repeat right 15px center;
+    background-size: 14px;
+}
+
+.icon {
+    margin-right: 12px;
+    color: #aaa;
+    font-size: 1.4em;
+}
+
+.image-link-group {
+    position: relative;
+}
+
+.placeholder-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+.placeholder-image:hover {
+    transform: scale(1.1);
+}
+
+.separator {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 25px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-manage {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.button-container {
+    cursor: grab;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.button-container:active {
+    cursor: grabbing;
+}
+
+.btn-submit {
+    background: linear-gradient(to right, #007bff, #4da6ff);
+    color: #fff;
+    border: none;
+}
+
+.form-group option {
+    background-color: #2a2a2a; /* خلفية داكنة للخيارات */
+    color: #fff; /* نص أبيض */
+}
+
+.user-row {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 15px;
+    min-height: 70px;
+    box-sizing: border-box;
+}
+
+.user-image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-name {
+    flex: 1;
+    color: #4da6ff;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.user-location {
+    flex: 1;
+    color: #ddd;
+}
+
+.user-visa {
+    flex: 1;
+    color: #ddd;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-edit, .icon-delete {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-edit:hover {
+    transform: scale(1.2);
+    color: #ffc107;
+}
+
+.icon-delete:hover {
+    transform: scale(1.2);
+    color: #dc3545;
+}
+
+/* Additional modal styles from additional-styles.css */
+#additionalModal {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    max-width: 90vw;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#additionalModal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#additionalModal .modal-title {
+    color: #007bff;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#additionalModal .close-btn {
+    color: #aaa;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px; /* تقليل الفجوة لتناسب داخل الصندوق */
+    margin-bottom: 10px;
+}
+
+#additionalModal .form-group {
+    flex: 1;
+    position: relative;
+}
+
+.form-group.full {
+    width: 100%;
+}
+
+#additionalModal .form-group input, #additionalModal .form-group select {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 10px 10px 30px;
+    font-size: 1em;
+    transition: border 0.3s;
+    box-sizing: border-box; /* ضمان عدم خروج الحدود */
+}
+
+#additionalModal .form-group input:focus, #additionalModal .form-group select:focus {
+    border-color: #4da6ff;
+    outline: none;
+}
+
+#additionalModal .form-group select {
+    appearance: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My9vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBmaWxsPSIjNGRhNmZmIiBkPSJNNiA5LjVsLTQuNSA0LjUtNC41LTQuNSIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background-size: 12px;
+}
+
+#additionalModal .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 1em;
+}
+
+.label {
+    flex: 0 0 120px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+#additionalModal .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#additionalModal .btn-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#additionalModal .btn-submit:hover {
+    background-color: #0056b3;
+}
+
+#familySection {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.member-field {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#additionalModal.show {
+    opacity: 1;
+}
