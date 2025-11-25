@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/images/gallery/*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/images/home/*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/images/flags/*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/images/favicon.png*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/images/logo.png"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/images/logo.png*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/videos/SpainInMoroccoEnglish-2.mp4*",
+            "resourceTypes": [
+                "media"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/MAR/home/Spain%20in%20Morocco-English.ogg*",
+            "resourceTypes": [
+                "media"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/images/avatar/01.jpg"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/images/avatar/01.jpg*",
+            "resourceTypes": [
+                "image"
+            ]
+        }
+    }
+]

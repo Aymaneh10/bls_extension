@@ -1,18 +1,109 @@
 {
   "manifest_version": 3,
-  "name": "BLS Automation Control Panel",
-  "version": "1.0",
-  "permissions": ["scripting", "activeTab"],
+  "name": "Project Vortex",
+  "version": "1.0.0",
+  "description": "A feature-rich extension for managing clients and other functionalities in a popup UI.",
+
+  "icons": {
+    "16": "icon/Vortex_16.png",
+    "48": "icon/Vortex_48.png",
+    "128": "icon/Vortex_128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_title": "Manage Clients",
+    "default_icon": {
+      "16": "icon/Vortex_16.png",
+      "48": "icon/Vortex_48.png",
+      "128": "icon/Vortex_128.png"
+    }
+},
+  "options_page": "options.html",
   "content_scripts": [
     {
-      "matches": ["https://*.blsspainmorocco.net/*"],
-      "js": ["content.js"]
+      "matches": [
+        "https://*.blsspainmorocco.net/*",
+        "https://*.blsspainglobal.com/*"
+      ],
+      "js": [
+        "toolbar/PAGE_REDIRECTOR.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://*.blsspainmorocco.net/*",
+        "https://*.blsspainglobal.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_idle"
     }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": false,
+        "path": "src/rules_MAR/rules1.json"
+      },
+      {
+        "id": "ruleset_2",
+        "enabled": false,
+        "path": "src/rules_MAR/rules2.json"
+      },
+      {
+        "id": "ruleset_3",
+        "enabled": false,
+        "path": "src/rules_MAR/rules3.json"
+      }
+    ]
+  },
+  "permissions": [
+    "webRequest",
+    "declarativeNetRequest",
+    "activeTab",
+    "scripting",
+    "storage",
+    "system.cpu",
+    "system.memory",
+    "system.storage",
+    "system.display",
+    "tabs",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://*.blsspainmorocco.net/*",
+    "https://*.blsspainglobal.com/*"
   ],
   "web_accessible_resources": [
     {
-      "resources": ["ui/*"],
-      "matches": ["https://*.blsspainmorocco.net/*"]
+      "resources": [
+        "toolbar/*",
+        "ui/*",
+        "ui/index.html",
+        "ui/script.js",
+        "ui/styles.css",
+        "ui/fonts/*",
+        "ui/fonts/fontawesome/*",
+        "ui/img/*",
+        "script/*",
+        "script/pages/*",
+        "script/pages/CATEGORY_SCRIPT;js",
+        "script/pages/LOGIN_SCRIPT.js",
+        "script/pages/NO_DATE_SLOT_SCRIPT.js",
+        "script/pages/SELECT_DATE_SLOT.js"
+
+      ],
+      "matches": [
+        "https://*.blsspainmorocco.net/*",
+        "https://*.blsspainglobal.com/*"
+      ]
     }
   ]
 }

@@ -374,7 +374,7 @@ body {
 
 #additionalModal .form-group select {
     appearance: none;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My9vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBmaWxsPSIjNGRhNmZmIiBkPSJNNiA5LjVsLTQuNSA0LjUtNC41LTQuNSIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj48cGF0aCBmaWxsPSIjNGRhNmZmIiBkPSJNNiA5LjVsLTQuNSA0LjUtNC41LTQuNSIvPjwvc3ZnPg==') no-repeat right 10px center;
     background-size: 12px;
 }
 

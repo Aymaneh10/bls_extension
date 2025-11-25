@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/site.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/css/site.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/style.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/css/style.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/vendor/font-awesome/webfonts/*",
+            "resourceTypes": [
+                "font"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/all.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/vendor/font-awesome/css/all.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://fonts.googleapis.com/css2*family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/vendor/bootstrap-icons/bootstrap-icons.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/bootstrap.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://*.blsspainmorocco.net/assets/vendor/bootstrap/dist/css/bootstrap.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/kendo.common.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/kendo/css/kendo.common.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/keyboard.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/virtualkeyboard/css/keyboard.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/kendo.silver.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/kendo/css/kendo.silver.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/tiny-slider.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/tiny-slider/tiny-slider.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/color.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/css/color.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/choices.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/choices/css/choices.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/flatpickr.min.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/flatpickr/css/flatpickr.min.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+                "extensionPath": "/src/loaded/styles/glightbox.css"
+            }
+        },
+        "condition": {
+            "urlFilter": "*://www.blsspainmorocco.net/assets/vendor/glightbox/css/glightbox.css*",
+            "resourceTypes": [
+                "stylesheet"
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "*://*/*webfonts/*",
+            "resourceTypes": [
+                "font"
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "chrome-extension://pdlgfllljnoojhmmibchdfkjicmggoch/src/loaded/webfonts/fa-brands-400.woff2",
+            "resourceTypes": [
+                "font"
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "https://www.blsspainmorocco.net/MAR/fonts/poppins/poppins-v21-latin-700.woff2",
+            "resourceTypes": [
+                "font"
+            ]
+        }
+    }
+]

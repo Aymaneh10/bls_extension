@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html lang=en>
+    <meta charset=UTF-8>
+    <meta content="width=device-width,initial-scale=1" name=viewport>
+    <link href=ui/fonts/fontawesome/all.min.css rel=stylesheet>
+    <link href=css/options.css rel=stylesheet>
+    <script src=dependencies/chart.min.js defer></script>
+    <script src=dependencies/progressbar.min.js defer></script>
+    <script src=dependencies/firebase-app.js></script>
+    <script src=dependencies/firebase-auth.js></script>
+    <script src=dependencies/crypto-js.min.js></script>
+    <script src=js/options.js defer></script>
+    <title>Options Testing</title>
+    <style></style>
+    <body class=optionsBody>
+      <div class=menu-container id=menuContainer>
+        <div class=tab-navigation id=tabNav><input id=tab1 name=tab type=radio checked><label for=tab1 id=labelClientList></label><input id=tab2 name=tab type=radio><label for=tab2 id=labelSystemInfo></label><input id=tab3 name=tab type=radio><label for=tab3 id=labelSupport></label></div>
+      </div>
+      <div class=client-list-section>
+        <div class=client-filter-container><button class=filter data-filter=nationality><i class="fa-solid fa-globe-africa"></i><span id=nationalityText></span></button><button class=filter data-filter=center><i class="fa-solid fa-location-dot"></i><span id=centerText></span></button></div>
+        <div class=client-list id=results></div>
+        <div class=external-login-buttons style=position:relative;top:12px;left:40%><a href=https://algeria.blsspainglobal.com/DZA/account/login class=rounded-button style=display:inline-block target=_blank><img alt="Algeria Logo" src=ui/img/Algeria.png style=width:30px;height:30px;border-radius:50%></a><a href=https://www.blsspainmorocco.net/MAR/account/login class=rounded-button style=display:inline-block target=_blank><img alt="Moroccan Logo" src=ui/img/Maroc.png style=width:30px;height:30px;border-radius:50%></a></div>
+      </div>
+      <div class="hidden system-info-section">
+        <div class=device-info>
+          <p><span id=deviceUUIDText>Device UUID</span><span id=deviceUUIDKey class="key-classes device-uuid-key"><span class=placeholder>Waiting for data...</span>
+              <p><span id=captchaKeyText>Captcha KEY</span><span id=captchaKey class="key-classes captcha-key">AI-SANDSTORM-CAPTCHA-API</span>
+              <p><span id=cpuText>Processor ID</span><span id=cpuIDKey class="key-classes cpu-id-key">Waiting for data...</span>
+        </div>
+        <div class=settings>
+          <div class=toggles>
+            <div class=toggle-setting><span id=toggleNightMode class=toggle-span></span>
+              <div id=toggleThemeButton><span class=switch-label>
+                  <div class=toggle-switch id=toggle1><svg viewBox="0 0 25 25" class=moon>
+                      <path d="M22.89 18.24a.49.49 0 0 0-.55-.17 9.4 9.4 0 0 1-11.46-4.78 9.53 9.53 0 0 1 2.82-11.4.49.49 0 0 0 .17-.55.5.5 0 0 0-.48-.34A11.38 11.38 0 0 0 5 4.76 11.52 11.52 0 0 0 13.39 24a11.37 11.37 0 0 0 9.53-5.18.48.48 0 0 0-.03-.58zM13.39 23A10.52 10.52 0 0 1 5.71 5.43 10.39 10.39 0 0 1 12 2.1a10.52 10.52 0 0 0-2 11.61 10.24 10.24 0 0 0 11.27 5.68A10.35 10.35 0 0 1 13.39 23z" style=fill:#f0ac19 />
+                    </svg><svg viewBox="0 0 64 64" class=sun>
+                      <circle cx=32 cy=32 r=12 style=fill:none;stroke:#231f20;stroke-width:1.5px />
+                      <path d="M39.682 35.636A8.483 8.483 0 0 1 34.2 40.21M32 16V8M40.907 16.572l2.186-3.785M48.214 23.546l3.785-2.185M48 32h8M49 41.815 52.785 44M42.269 48.214l2.185 3.785M32 48v8M23.093 47.428l-2.186 3.785M17.358 41.361l-3.785 2.185M16 32H8M18.144 24l-3.785-2.185M24.454 17.358l-2.185-3.785" style=fill:none;stroke:#231f20;stroke-width:2px />
+                    </svg>
+                    <div class=toggle-circle></div>
+                  </div>
+                </span></div>
+            </div>
+            <div class=toggle-setting><span id=toggleSound class=toggle-span></span>
+              <div class=toggle-switch id=toggle2>
+                <div class=toggle-circle></div>
+              </div>
+            </div>
+          </div>
+          <div class=circle-progress-bar id=circleProgressBar>
+            <div id=days-left>
+              <div id=days-number></div>
+            </div>
+          </div>
+        </div>
+        <div class=statistics><canvas height=150 id=myChart width=300></canvas></div>
+      </div>
+      <div class="hidden support-section">
+        <div class=custom-select-wrapper>
+          <div class=custom-select>
+            <div class=custom-select__trigger><span class=flag></span><span></span></div>
+            <div class=custom-options><span class=custom-option data-value=en><span class="flag flag-en"></span></span><span class=custom-option data-value=ar><span class="flag flag-ar"></span></span><span class=custom-option data-value=fr><span class="flag flag-fr"></span></span></div>
+          </div>
+        </div>
+        <div class=support-buttons><button class=reinscreption-btn id=reinscreptionBtn><span id=reinscreptionBtnText></span><svg viewBox="-1.9 -1.9 22.80 22.80" class=cf-icon-svg fill=#fffafa height=25px stroke=#fffafa stroke-width=0.00019 width=25px>
+              <g id=SVGRepo_bgCarrier stroke-width=0></g>
+              <g id=SVGRepo_tracerCarrier stroke-width=0.19 stroke=#CCCCCC stroke-linecap=round stroke-linejoin=round></g>
+              <g id=SVGRepo_iconCarrier>
+                <path d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-6.24-.064H6.81a2.528 2.528 0 0 0-2.692 2.303v1.51a.794.794 0 0 0 .792.792h7.166a.794.794 0 0 0 .792-.791V11.82a2.528 2.528 0 0 0-2.692-2.302zM6.14 6.374a2.353 2.353 0 1 0 2.353-2.353A2.353 2.353 0 0 0 6.14 6.374z"></path>
+              </g>
+            </svg></button><button class=bug-report-btn id=bugReportBtn><i class="fas fa-bug"></i><span id=bugReportBtnText></span></button><button class=update-btn id=updateBtn><i class="fas fa-sync-alt"></i><span id=updateBtnText></span></button><button class=logout-btn id=logoutBtn><svg viewBox="0 0 16 16" fill=none height=15px width=15px transform=rotate(-45) xmlns=http://www.w3.org/2000/svg>
+              <g id=SVGRepo_bgCarrier stroke-width=0></g>
+              <g id=SVGRepo_tracerCarrier stroke-linecap=round stroke-linejoin=round></g>
+              <g id=SVGRepo_iconCarrier>
+                <path d="M2 2V10.5L3.5 12L6.33579 9.16421L12.5858 15.4142L15.4142 12.5858L9.16421 6.33579L12 3.5L10.5 2H2Z" fill=#ffffff></path>
+              </g>
+            </svg><span id=logOutBtnText></span></button></div>
+        <div class=footer>
+          <p id=rightsText>
+          <nav><a href=# id=aboutUsText></a> | <a href=# id=privacyPolicyText></a> | <a href=# id=termsOfServiceText></a> | <a href=# id=contactUsText></a></nav>
+          <p><span id=followUs></span><span id=socialsText></span>
+        </div>
+      </div>
